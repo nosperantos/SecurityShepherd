@@ -694,7 +694,7 @@ public class GetterTest {
                   + " not have"
                   + " opened"
                   + " by default"); // User Should not have completed this module by default after
-                                    // running a fresh DB. ensure you have a fresh DB if this fails
+          // running a fresh DB. ensure you have a fresh DB if this fails
         } else {
           log.debug("PASS: Function says user has not opened module");
           return; // Pass
