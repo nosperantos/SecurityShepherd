@@ -185,7 +185,7 @@ public class GetModuleIT {
     String moduleId =
         new String(
             "0dbea4cb5811fff0527184f99bd5034ca9286f11"); // Insecure Direct Object References Module
-                                                         // Id
+    // Id
     String levelHash =
         new String("fdb94122d0f032821019c7edf09dc62ea21e25ca619ed9107bcc50e4a8dbc100");
     String userName = "getModule1";
@@ -338,7 +338,7 @@ public class GetModuleIT {
     String moduleId =
         new String(
             "0dbea4cb5811fff0527184f99bd5034ca9286f11"); // Insecure Direct Object References Module
-                                                         // Id
+    // Id
     String levelHash =
         new String("fdb94122d0f032821019c7edf09dc62ea21e25ca619ed9107bcc50e4a8dbc100");
     String userName = "getModule1";

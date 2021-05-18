@@ -151,10 +151,8 @@ public class CsrfChallengeTargetFour extends HttpServlet {
               "SELECT count(csrfTokenscol) FROM csrfTokens WHERE csrfTokenscol = ?");
       prepstmt.setString(1, csrfToken);
       ResultSet rs = prepstmt.executeQuery();
-      result =
-          rs
-              .next(); // If there is a row then the CSRF token was in the DB. Therefore CSRF
-                       // Validated
+      result = rs.next(); // If there is a row then the CSRF token was in the DB. Therefore CSRF
+      // Validated
     } catch (Exception e) {
       log.error("CSRF4 Token Check Failure: " + e.toString());
       result = false;

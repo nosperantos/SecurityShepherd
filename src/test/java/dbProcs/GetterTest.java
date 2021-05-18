@@ -618,9 +618,8 @@ public class GetterTest {
               log.debug("checkPlayerResultTest" + checkPlayerResultTest);
               if (checkPlayerResultTest == null) return; // Pass
               else {
-                fail(
-                    "Function says user has not completed module"); // Even though this test just
-                                                                    // marked it as Completed
+                fail("Function says user has not completed module"); // Even though this test just
+                // marked it as Completed
               }
             } else fail("Could not mark data storage lesson as complete for user");
           } else fail("Could not Mark Data Storage Lesson as Opened by Default admin");
@@ -678,7 +677,7 @@ public class GetterTest {
     String unOpenedModuleId =
         new String(
             "0dbea4cb5811fff0527184f99bd5034ca9286f11"); // Insecure Direct Object References Module
-                                                         // Id
+    // Id
     try {
       if (verifyTestUser(applicationRoot, userName, userName)) {
         String test = Getter.checkPlayerResult(applicationRoot, unOpenedModuleId, userName);
@@ -694,7 +693,8 @@ public class GetterTest {
                   + " should"
                   + " not have"
                   + " opened"
-                  + " by default"); // User Should not have completed this module by default after running a fresh DB. ensure you have a fresh DB if this fails
+                  + " by default"); // User Should not have completed this module by default after
+                                    // running a fresh DB. ensure you have a fresh DB if this fails
         } else {
           log.debug("PASS: Function says user has not opened module");
           return; // Pass
@@ -732,7 +732,7 @@ public class GetterTest {
                   "Function says "
                       + userName
                       + " has not opened module"); // User Should have opened and not completed CSRF
-                                                   // Three
+              // Three
             } else return; // Pass
           } else fail("Could not Mark CSRF 3 as Opened by " + userName);
         } else {
@@ -804,7 +804,7 @@ public class GetterTest {
     ArrayList<String[]> modules = Getter.getAllModuleInfo(applicationRoot);
     if (modules.size()
         > 75) // Shepherd v3.0 has 76 Modules. If less than All are Returned, then there is a
-              // problem with the Open Modules Function or the Retrieve data function
+    // problem with the Open Modules Function or the Retrieve data function
     {
       log.debug("PASS: Found " + modules.size() + " modules");
       return;
@@ -1107,9 +1107,8 @@ public class GetterTest {
                   fail("Could not find user's feedback");
                 }
               } else {
-                fail(
-                    "Function says user has not completed module"); // Even though this test just
-                                                                    // marked it as Completed
+                fail("Function says user has not completed module"); // Even though this test just
+                // marked it as Completed
               }
             } else fail("Could not mark data storage lesson as complete for user");
           } else fail("Could not Mark Data Storage Lesson as Opened by Default admin");
@@ -1158,7 +1157,7 @@ public class GetterTest {
     String userName = new String("testIncModuleMenu1");
     String lowestRankModuleId =
         "0dbea4cb5811fff0527184f99bd5034ca9286f11"; // This should be changed if an easier module is
-                                                    // made
+    // made
     try {
       if (verifyTestUser(applicationRoot, userName, userName)) {
         String userId = Getter.getUserIdFromName(applicationRoot, userName);
@@ -1169,15 +1168,15 @@ public class GetterTest {
               Getter.getIncrementalModules(applicationRoot, userId, lang, "testingCSRFtoken");
           if (incrementalModules.indexOf("Completed")
               == -1) // User should not have completed any modules. The Completed Button should not
-                     // be present
+          // be present
           {
             if (incrementalModules.indexOf(lowestRankModuleId)
                 > -1) // The only module Id to be returned should be this one as it is the first
-                      // presented (Lowest Incremental Rank)
+            // presented (Lowest Incremental Rank)
             {
               if (incrementalModules.indexOf("Get Next Challenge")
                   > -1) // This is the English string that should be included with the lang
-                        // submitted in this unit test
+              // submitted in this unit test
               {
                 log.debug(
                     "PASS: Incremental Menu Appears to have Rendered correctly with the"
@@ -1213,10 +1212,10 @@ public class GetterTest {
     String userName = new String("testIncModuleMenu3");
     String lowestRankModuleId =
         "0dbea4cb5811fff0527184f99bd5034ca9286f11"; // This should be changed if an easier module is
-                                                    // made
+    // made
     String secondLowestRankModuleId =
         "b9d82aa7b46ddaddb6acfe470452a8362136a31e"; // This should be changed if an easier module is
-                                                    // made or is orded before this
+    // made or is orded before this
     try {
       if (verifyTestUser(applicationRoot, userName, userName)) {
         String userId = Getter.getUserIdFromName(applicationRoot, userName);
@@ -1244,7 +1243,7 @@ public class GetterTest {
                     Getter.getIncrementalModules(applicationRoot, userId, lang, "testingCSRFtoken");
                 if (incrementalModules.indexOf("Completed")
                     > -1) // User should  have completed one module. The Completed Button should be
-                          // present
+                // present
                 {
                   if (incrementalModules.indexOf(lowestRankModuleId)
                       > -1) // The only completed module Id to be returned should be this one
@@ -1252,7 +1251,7 @@ public class GetterTest {
                     if (incrementalModules.indexOf(secondLowestRankModuleId) > -1) {
                       if (incrementalModules.indexOf("Get Next Challenge")
                           > -1) // This is the English string that should be included with the lang
-                                // submitted in this unit test
+                      // submitted in this unit test
                       {
                         log.debug(
                             "PASS: Incremental Menu Appears to have Rendered correctly with the"
@@ -1280,8 +1279,8 @@ public class GetterTest {
               } else {
                 fail(
                     "checkPlayerResultTest says user has not completed module"); // Even though this
-                                                                                 // test just marked
-                                                                                 // it as Completed
+                // test just marked
+                // it as Completed
               }
             } else fail("Could not mark data storage lesson as complete for user");
           } else fail("Could not Lowest Rank Lesson as Opened by User");
@@ -1341,7 +1340,7 @@ public class GetterTest {
     String userName = new String("testIncModuleMenuScript1");
     String lowestRankModuleId =
         "0dbea4cb5811fff0527184f99bd5034ca9286f11"; // This should be changed if an easier module is
-                                                    // made
+    // made
     try {
       if (verifyTestUser(applicationRoot, userName, userName)) {
         String userId = Getter.getUserIdFromName(applicationRoot, userName);
@@ -1353,15 +1352,15 @@ public class GetterTest {
                   applicationRoot, userId, lang, "testingCSRFtoken");
           if (incrementalModules.indexOf("Completed")
               == -1) // User should not have completed any modules. The Completed Button should not
-                     // be present
+          // be present
           {
             if (incrementalModules.indexOf(lowestRankModuleId)
                 > -1) // The only module Id to be returned should be this one as it is the first
-                      // presented (Lowest Incremental Rank)
+            // presented (Lowest Incremental Rank)
             {
               if (incrementalModules.indexOf("Get Next Challenge")
                   > -1) // This is the English string that should be included with the lang
-                        // submitted in this unit test
+              // submitted in this unit test
               {
                 if (!incrementalModules.endsWith(";</script>")) {
                   log.debug(
@@ -1403,10 +1402,10 @@ public class GetterTest {
     String userName = new String("testIncModuleMenuScript3");
     String lowestRankModuleId =
         "0dbea4cb5811fff0527184f99bd5034ca9286f11"; // This should be changed if an easier module is
-                                                    // made
+    // made
     String secondLowestRankModuleId =
         "b9d82aa7b46ddaddb6acfe470452a8362136a31e"; // This should be changed if an easier module is
-                                                    // made or is orded before this
+    // made or is orded before this
     try {
       if (verifyTestUser(applicationRoot, userName, userName)) {
         String userId = Getter.getUserIdFromName(applicationRoot, userName);
@@ -1435,7 +1434,7 @@ public class GetterTest {
                         applicationRoot, userId, lang, "testingCSRFtoken");
                 if (incrementalModules.indexOf("Completed")
                     > -1) // User should  have completed one module. The Completed Button should be
-                          // present
+                // present
                 {
                   if (incrementalModules.indexOf(lowestRankModuleId)
                       > -1) // The only completed module Id to be returned should be this one
@@ -1443,7 +1442,7 @@ public class GetterTest {
                     if (incrementalModules.indexOf(secondLowestRankModuleId) > -1) {
                       if (incrementalModules.indexOf("Get Next Challenge")
                           > -1) // This is the English string that should be included with the lang
-                                // submitted in this unit test
+                      // submitted in this unit test
                       {
                         if (!incrementalModules.endsWith(";</script>")) {
                           log.debug(
@@ -1479,8 +1478,8 @@ public class GetterTest {
               } else {
                 fail(
                     "checkPlayerResultTest says user has not completed module"); // Even though this
-                                                                                 // test just marked
-                                                                                 // it as Completed
+                // test just marked
+                // it as Completed
               }
             } else fail("Could not mark data storage lesson as complete for user");
           } else fail("Could not Lowest Rank Lesson as Opened by User");
@@ -1885,7 +1884,7 @@ public class GetterTest {
                         > -1) {
                       if (lessonsMenu.indexOf("Insecure Direct Object References")
                           > -1) // English string should exist in output based on the submitted
-                                // locale
+                      // locale
                       {
                         log.debug(
                             "PASS: GetLessons Menu Appears to have Rendered correctly with the"
@@ -2090,7 +2089,7 @@ public class GetterTest {
       String moduleId =
           new String(
               "0dbea4cb5811fff0527184f99bd5034ca9286f11"); // Insecure Direct Object References
-                                                           // Module Id
+      // Module Id
       String moduleName = new String("Insecure Direct Object References");
       String moduleLocalNameKey = Getter.getModuleNameLocaleKey(applicationRoot, moduleId);
       ResourceBundle bundle = ResourceBundle.getBundle("i18n.moduleGenerics.moduleNames", locale);
@@ -2430,7 +2429,7 @@ public class GetterTest {
   public void testGetOpenCloseCategoryMenu() {
     String moduleCategory =
         "Injection"; // This will need to be updated to a locale key when this method is enhansed to
-                     // support localisation
+    // support localisation
     String categoryMenu = Getter.getOpenCloseCategoryMenu(applicationRoot);
     if (categoryMenu.indexOf("option") == -1) {
       fail("Category Menu does not have any option tags");
@@ -2556,7 +2555,7 @@ public class GetterTest {
                 int lengthOfProgress =
                     Integer.parseInt(
                         firstCharacterOfLength); // We dont care what number it is. As Long as it's
-                                                 // not 0
+                // not 0
                 if (lengthOfProgress == 0) {
                   log.debug("Found int value: " + lengthOfProgress);
                   log.debug("Was working with this string: " + firstCharacterOfLength);
@@ -2717,7 +2716,7 @@ public class GetterTest {
                   log.debug("Found " + numberofChallengesReturned + " modules");
                   if (!tournamentModules.contains(
                       "Corporal")) // English String Expected to be in the response when submitted
-                                   // with the locale for this unit test
+                  // with the locale for this unit test
                   {
                     fail("Could not detect i18n English String in Tournament Output");
                   } else if (tournamentModules.indexOf(
@@ -2812,7 +2811,7 @@ public class GetterTest {
                 log.debug("Found " + numberofChallengesReturned + " module");
                 if (!tournamentModules.contains(
                     "Admiral")) // English String Expected to be in the response when submitted with
-                                // the locale for this unit test
+                // the locale for this unit test
                 {
                   fail("Could not detect i18n English String Admiral in Tournament Output");
                 } else if (tournamentModules.indexOf(
@@ -2869,7 +2868,7 @@ public class GetterTest {
     String csrfChallengeOne =
         new String(
             "20e755179a5840be5503d42bb3711716235005ea"); // CSRF Challenge 1 (Should have CSRF
-                                                         // Counter of 0 for new user)
+    // Counter of 0 for new user)
     try {
       if (verifyTestUser(applicationRoot, userName, userName)) {
         String userId = Getter.getUserIdFromName(applicationRoot, userName);
@@ -2882,7 +2881,7 @@ public class GetterTest {
             if (Setter.updateCsrfCounter(applicationRoot, csrfChallengeOne, userId)) {
               if (Getter.isCsrfLevelComplete(applicationRoot, csrfChallengeOne, userId)) {
                 return; // Pass, because CSRF level is completed after the user CSRF counter was
-                        // incremented
+                // incremented
               } else {
                 fail("CSRF 1 not completed after successful increment");
               }
@@ -2910,7 +2909,7 @@ public class GetterTest {
     String csrfChallengeTwo =
         new String(
             "94cd2de560d89ef59fc450ecc647ff4d4a55c15d"); // CSRF Challenge 2 (Should have CSRF
-                                                         // Counter of 0 for new user
+    // Counter of 0 for new user
     try {
       if (verifyTestUser(applicationRoot, userName, userName)) {
         String userId = Getter.getUserIdFromName(applicationRoot, userName);
@@ -2921,12 +2920,11 @@ public class GetterTest {
           if (!Getter.getModuleAddress(applicationRoot, csrfChallengeTwo, userId).isEmpty()) {
             if (!Getter.isCsrfLevelComplete(applicationRoot, csrfChallengeTwo, userId)) {
               return; // Pass, because CSRF level is not completed because the CSRF Counter for the
-                      // user is 0
+              // user is 0
             } else {
-              fail(
-                  "CSRF 2 marked completed without increment"); // CSRF 2 Challenge should have a
-                                                                // counter of 0 and should not
-                                                                // return true.
+              fail("CSRF 2 marked completed without increment"); // CSRF 2 Challenge should have a
+              // counter of 0 and should not
+              // return true.
             }
           } else {
             fail("Could not Mark CSRF 2 as opened by user");
@@ -2948,7 +2946,7 @@ public class GetterTest {
     String csrfChallengeTwo =
         new String(
             "94cd2de560d89ef59fc450ecc647ff4d4a55c15d"); // CSRF Challenge 2 (Should have CSRF
-                                                         // Counter of 0 for new user
+    // Counter of 0 for new user
     // Open all Modules First so that the Module Can Be Opened
     if (Setter.openAllModules(applicationRoot, false)
         && Setter.openAllModules(applicationRoot, true)) {

@@ -67,7 +67,7 @@ public class EnableScoreboard extends HttpServlet {
           String scoreboardMessage = new String();
           if (classId
               .isEmpty()) // Null Submitted - configure scoreboard to list all players regardless of
-                          // class
+          // class
           {
             log.debug("Null Class submitted");
             ScoreboardStatus.setScoreboeardOpen();

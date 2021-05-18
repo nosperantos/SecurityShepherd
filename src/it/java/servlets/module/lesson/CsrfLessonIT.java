@@ -117,7 +117,7 @@ public class CsrfLessonIT {
           fail(message);
         } else if (!servletResponse.contains(
             "administrator@SecurityShepherd.com")) // This is hardcoded in response. if it fails
-                                                   // then the level isn't working for some reason
+        // then the level isn't working for some reason
         {
           String message = new String("Unexpected CSRF Lesson Response");
           log.fatal(message);
@@ -170,7 +170,7 @@ public class CsrfLessonIT {
           fail(message);
         } else if (!servletResponse.contains(
             "administrator@SecurityShepherd.com")) // This is hardcoded in response. if it fails
-                                                   // then the level isn't working for some reason
+        // then the level isn't working for some reason
         {
           String message = new String("Unexpected CSRF Lesson Response");
           log.fatal(message);

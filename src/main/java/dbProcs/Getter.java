@@ -101,7 +101,7 @@ public class Getter {
       userFind.next();
       log.debug(
           "User Found"); // User found if a row is in the database, this line will not work if the
-                         // result
+      // result
       // set is empty
       userFound = true;
     } catch (SQLException e) {
@@ -332,7 +332,7 @@ public class Getter {
       String challengeCategory = new String();
       int rowNumber =
           0; // Identifies the first row, ie the start of the list. This is slightly different
-             // output to every other row
+      // output to every other row
       while (challenges.next()) {
         if (!challengeCategory.equalsIgnoreCase(challenges.getString(2))) {
           challengeCategory = challenges.getString(2);
@@ -922,14 +922,14 @@ public class Getter {
           int bronzeMedals = resultSet.getInt(6);
           if (resultAmount
               == 1) // First Place is Returned First, so this will be the biggest bar on the
-                    // scoreboard
+          // scoreboard
           {
             int highscore = score;
             // log.debug("Current Highscore Listing is " + highscore);
             // Use the high score to scale the width of the bars for the whole scoreboard
             float maxBarScale =
                 1.02f; // High Score bar will have a scale of 1 //This will get used when a scale is
-                       // added to the scoreboard
+            // added to the scoreboard
             baseBarScale = highscore * maxBarScale;
             // setting up variables for Tie Scenario Placings
             prevPlace = 1;
@@ -964,9 +964,9 @@ public class Getter {
               (int)
                   ((score * 100)
                       / baseBarScale); // bar scale is the percentage the bar should be of the row's
-                                       // context (Highest Possible is depends on scale set in
-                                       // maxBarScale. eg: maxBarScale = 1.1 would mean the max
-                                       // scale would be 91% for a single row)
+          // context (Highest Possible is depends on scale set in
+          // maxBarScale. eg: maxBarScale = 1.1 would mean the max
+          // scale would be 91% for a single row)
 
           String userMedalString = new String();
           if (goldMedals > 0 || silverMedals > 0 || bronzeMedals > 0) {
@@ -1695,7 +1695,7 @@ public class Getter {
       log.debug("Opening Result Set from moduleTournamentOpenInfo");
       int currentSection =
           0; // Used to identify the first row, as it is slightly different to all other rows for
-             // output
+      // output
       while (levels.next()) {
         // Create Row Entry First
         // log.debug("Adding " + lessons.getString(1));
@@ -1721,7 +1721,7 @@ public class Getter {
           // Do we need to close a previous list?
           if (currentSection
               != 0) // If a Section Select hasn't been made before, we don't need to close any
-                    // previous sections
+          // previous sections
           {
             // We've had a section before, so need to close the previous one before we make this new
             // one
@@ -1843,8 +1843,8 @@ public class Getter {
       ResultSet levels = callstmt.executeQuery();
       boolean thisModuleIsOpen =
           true; // If Incremental Mode is enabled, after all the modules that have been completed
-                // have been added to the JSON Array the next level will be labeled as open and the
-                // rest as closed
+      // have been added to the JSON Array the next level will be labeled as open and the
+      // rest as closed
       while (levels.next()) {
         jsonObject = new JSONObject();
         boolean moduleCompleted = levels.getString(4) != null;

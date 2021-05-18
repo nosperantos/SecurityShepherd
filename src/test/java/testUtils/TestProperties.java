@@ -367,9 +367,8 @@ public class TestProperties {
               if (checkPlayerResultTest == null) {
                 result = true;
               } else {
-                fail(
-                    "Function says user has not completed module"); // Even though this test just
-                                                                    // marked it as Completed
+                fail("Function says user has not completed module"); // Even though this test just
+                // marked it as Completed
               }
             } else fail("Could not mark data storage lesson as complete for user");
           } else fail("Could not Mark Data Storage Lesson as Opened by Default admin");
