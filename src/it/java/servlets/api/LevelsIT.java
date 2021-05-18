@@ -99,7 +99,7 @@ public class LevelsIT {
     String moduleId =
         new String(
             "0dbea4cb5811fff0527184f99bd5034ca9286f11"); // Insecure Direct Object References Module
-                                                         // Id (First Challenge)
+    // Id (First Challenge)
     String userName = "ctfModeNoLevels";
     try {
       // Verify User Exists in DB
@@ -187,7 +187,7 @@ public class LevelsIT {
     String moduleId =
         new String(
             "0dbea4cb5811fff0527184f99bd5034ca9286f11"); // Insecure Direct Object References Module
-                                                         // Id (First Challenge)
+    // Id (First Challenge)
     String userName = "ctfModeWithLevel";
     try {
       // Verify User Exists in DB

@@ -78,7 +78,7 @@ public class SetDefaultClass extends HttpServlet {
             log.debug("Null Class submitted");
             Register.setDefaultClass(
                 ""); // Empty string is caught in the Register Servlet and sets the user to the
-                     // Unassigned Group
+            // Unassigned Group
             htmlOutput = "Default Class Set To Unassigned Players";
             log.debug(htmlOutput);
           } else {

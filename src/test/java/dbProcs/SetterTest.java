@@ -139,7 +139,7 @@ public class SetterTest {
                 log.debug("expected score: " + expectedAfter);
                 if (scoreAfter
                     != expectedAfter) // Checking exact number should be equal to and number below
-                                      // as well incase rounded d
+                // as well incase rounded d
                 {
                   log.debug("score before: " + scoreBefore);
                   log.debug("score after : " + scoreAfter);
@@ -250,7 +250,7 @@ public class SetterTest {
 
                 if (scoreAfter
                     != scoreBefore) // Checking exact number should be equal to and number below as
-                                    // well incase rounded d
+                // well incase rounded d
                 {
                   log.debug("score before: " + scoreBefore);
                   log.debug("score after : " + scoreAfter);

@@ -400,7 +400,7 @@ public class Validate {
                 result = false; // User will not access function they were attempting to call
                 UserKicker.removeFromKicklist(
                     userName); // Removing from kick list, as they are now authenticated, the DB
-                               // Layer Suspension will prevent them from signing in
+                // Layer Suspension will prevent them from signing in
               }
             }
           } catch (Exception e) {
